@@ -1,3 +1,14 @@
+/*
+    Script's name: restaurants_sequence.sql
+    Author: Anh Khoi Do
+    Version: 1.0
+    Creation: 2016/10/04 15:30:00
+*/
+
+
+/* Creation of a table named Restaurants.
+ This table is meant to contain the restaurants
+ and bars of Toronto, the biggest city of Canada. */
 CREATE TABLE Restaurants 
 (
     Id int CONSTRAINT restaurant_id_pk PRIMARY KEY,
@@ -6,6 +17,22 @@ CREATE TABLE Restaurants
     CITY VARCHAR2(20) NOT NULL
 );
 
+
+/* 
+    Because Oracle SQL does not have the auto_increment
+    keyword embedded into the CREATE TABLE statement,
+    one must create a sequence that has the job to increment
+    the column allocated for a restaurant's id whenever the
+    INSERT INTO statement is used.
+    
+    1. START WITH: This means that the very first restaurant
+    to be created in my table named Restaurants will have
+    1 as its id.
+    
+    2. INCREMENT BY: 1. This means the Id is incremented by
+    one everytime you add a restaurant to the table named
+    Restaurants.
+*/
 CREATE SEQUENCE seq_restaurants
     NOMAXVALUE
     START WITH 1
