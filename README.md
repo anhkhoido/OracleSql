@@ -3,4 +3,5 @@ This repostory contains my Oracle SQL scripts. It contains small yet simple exam
 As time go by, more tutorials will be added.
 
 Covered topics:
+
 1. Sequence (the equivalent of MySQL's auto_increment keyword).
