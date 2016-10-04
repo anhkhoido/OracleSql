@@ -3,6 +3,12 @@
     Author: Anh Khoi Do
     Version: 1.0
     Creation: 2016/10/04 15:30:00
+    
+    REVISION HISTORY
+    
+    Author             Version    Date           REASON(S)
+    ---------------------------------------------------------------------------------------
+    Anh Khoi Do        1.0        2016/10/04     Creation of the script.
 */
 
 
@@ -32,6 +38,18 @@ CREATE TABLE Restaurants
     2. INCREMENT BY: 1. This means the Id is incremented by
     one everytime you add a restaurant to the table named
     Restaurants.
+    
+    3. NOCACHE: This means that values of the sequence are not
+    pre-allocated, because there is no maximum number of restaurants.
+    
+    4. NOCYCLE: Because there is no maximum value, the increment
+    does not come back to a minimum value when the user does an
+    ascending query or statement.
+    
+    5. ORDER: This keyword indicates that the order of request
+    must be respected. For instance, the first INSERT INTO
+    statement that calls the sequence to assign an id to a restaurant
+    will give an id of one to said restaurant.
 */
 CREATE SEQUENCE seq_restaurants
     NOMAXVALUE
